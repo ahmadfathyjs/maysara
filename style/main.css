@@ -37,8 +37,11 @@ body{
   max-height: 400px
 }
 .about h1{
-  font-size: 4vw;
+  font-size: 33px;
   margin: 1rem .5rem;
+}
+.about p{
+  padding-right: 15%;
 }
 p{
   font-size: 22px;
@@ -51,9 +54,13 @@ p{
   color: #fffd51;
   text-align: center;
   margin: 1rem .5rem;
+  transition: all .8s ease;
+
 }
 .about a:hover{
   color: #ffc399;
+  transition: all .8s ease;
+  transform: translate(0, 20%);
 }
 .sm{
   display: none
@@ -67,19 +74,18 @@ p{
   margin-top: 2rem;
 }
 .why-container h2{
-  font-size: 3.8vw
+  font-size: 30px
 }
 .why{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 2rem auto
+  margin: 2rem 0
 }
 .reason{
-  margin: .5rem;
   padding: 1rem;
   text-align: center;
-  min-width: 300px
+  width: 33.333333%
 }
 .reason i {
   font-size: 90px;
@@ -107,7 +113,7 @@ p{
   margin-top: 3rem;
 }
 .footer h3{
-  font-size: 2vw
+  font-size: 28px
 }
 .btn{
   display: table;
@@ -137,5 +143,11 @@ p{
   }
   .col-4, .col-8{
     width: 100%;
+  }
+  .reason{
+    min-width: 350px
+  }
+  .about p{
+    padding-right: 0;
   }
 }
