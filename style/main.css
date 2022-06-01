@@ -1,0 +1,141 @@
+*{padding: 0;margin: 0;box-sizing: border-box;font-family: 'Noto Kufi Arabic', sans-serif;}
+:root{
+  --app-color: #346432
+}
+body{
+  background: var(--app-color);
+  color: #f8f8f8;
+}
+.header{
+  min-height: 100vh;
+}
+.header img{
+  width: 100%;
+  height: 100vh;
+}
+.about{
+  display: flex;
+}
+.col-4,.col-8{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  padding: .25rem;
+  min-height: 300px;
+}
+.col-8{
+  width: 60%;
+}
+
+.about img{
+  width: 100%;
+  min-height: 400px;
+  height: auto;
+}
+.about .sm img{
+  max-height: 400px
+}
+.about h1{
+  font-size: 4vw;
+  margin: 1rem .5rem;
+}
+p{
+  font-size: 22px;
+  margin: 1rem .5rem;
+}
+.about a{
+  /* text-decoration: none; */
+  font-weight: 900;
+  font-size: 22px;
+  color: #fffd51;
+  text-align: center;
+  margin: 1rem .5rem;
+}
+.about a:hover{
+  color: #ffc399;
+}
+.sm{
+  display: none
+}
+
+.why-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.why-container h2{
+  font-size: 3.8vw
+}
+.why{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem auto
+}
+.reason{
+  margin: .5rem;
+  padding: 1rem;
+  text-align: center;
+  min-width: 300px
+}
+.reason i {
+  font-size: 90px;
+  margin: .5rem auto;
+  color: #ffff5c
+}
+.reason h3{
+  color: #d4d4d4
+}
+
+.whats-icon{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  filter:drop-shadow(4px 4px 4px #222);
+}
+.whats-icon:hover{
+  transition: all .3s ease;
+  filter:drop-shadow(0px 0px 0px #222);
+
+}
+
+.footer{
+  text-align: center;
+  margin-top: 3rem;
+}
+.footer h3{
+  font-size: 2vw
+}
+.btn{
+  display: table;
+  font-size: 22px;
+  border: 2px solid var(--app-color);
+  box-shadow: 0 0 10px 1px #222;
+  margin: 2rem auto;
+  padding: .25rem 2rem;
+  text-decoration: none;
+  background: #d8d8d8;
+  font-weight: 900;
+  color: var(--app-color);
+  border-radius: 5px;
+}
+.btn:hover{
+  box-shadow: none
+}
+@media (max-width: 740px) {
+  .lg{
+    display: none
+  }
+  .sm{
+    display: block
+  }
+  .about{
+    flex-direction: column;
+  }
+  .col-4, .col-8{
+    width: 100%;
+  }
+}
