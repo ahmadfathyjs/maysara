@@ -1,10 +1,10 @@
 *{padding: 0;margin: 0;box-sizing: border-box;font-family: 'Noto Kufi Arabic', sans-serif;}
 :root{
-  --app-color: #346432
+  --app-color: #daf3de
 }
 body{
   background: var(--app-color);
-  color: #f8f8f8;
+  color: #121212;
 }
 .header{
   min-height: 100vh;
@@ -32,13 +32,26 @@ body{
   width: 100%;
   min-height: 400px;
   height: auto;
+  box-shadow: 0 5px 5px 1px #222;
+  border-radius: 30px;
 }
 .about .sm img{
   max-height: 400px
+
 }
 .about h1{
   font-size: 33px;
   margin: 1rem .5rem;
+  position: relative;
+}
+.about h1::after{
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  width: 40%;
+  height: 4px;
+  right: 0;
+  background-color: #1f6e2a
 }
 .about p{
   padding-right: 15%;
@@ -51,14 +64,14 @@ p{
   /* text-decoration: none; */
   font-weight: 900;
   font-size: 22px;
-  color: #fffd51;
+  color: #1f6e2a;
   text-align: center;
   margin: 1rem .5rem;
   transition: all .8s ease;
 
 }
 .about a:hover{
-  color: #ffc399;
+  color: #553fff;
   transition: all .8s ease;
   transform: translate(0, 20%);
 }
@@ -90,10 +103,10 @@ p{
 .reason i {
   font-size: 90px;
   margin: .5rem auto;
-  color: #ffff5c
+  color: #1f6e2a
 }
 .reason h3{
-  color: #d4d4d4
+  color: #1f6e2a
 }
 
 .whats-icon{
@@ -123,7 +136,7 @@ p{
   margin: 2rem auto;
   padding: .25rem 2rem;
   text-decoration: none;
-  background: #d8d8d8;
+  background: #1f6e2a;
   font-weight: 900;
   color: var(--app-color);
   border-radius: 5px;
@@ -131,11 +144,50 @@ p{
 .btn:hover{
   box-shadow: none
 }
+
+.btn.lg, .btn.sm{
+  position: absolute;
+  bottom: 35%;
+  left: 23%;
+  width: 14%;
+  text-align: center;
+  font-size: .75rem;
+  animation: ll .8s linear alternate infinite
+}
+.btn.sm{
+  left: 36%;
+  bottom: 24%;
+  width: 25%;
+  font-size: .75rem;
+  padding: 2px;
+  display: none;
+}
+.tooltip{
+  position: fixed;
+  bottom: 110px;
+  background: #fff;
+  box-shadow: 0 5px 40px 1px #222;
+  text-align: center;
+  padding: .25rem;
+  right: 15px;
+  border-radius: 10px;
+  animation: float 1s ease alternate infinite
+}
+.tooltip::after{
+  content: '';
+  position: absolute;
+  top: 100%;
+  z-index: 2;
+  right: 30%;
+  width:0;height: 0;
+  border: 10px solid transparent;
+  border-top-color: #fff;
+}
 @media (max-width: 740px) {
-  .lg{
+  .lg, .btn.lg{
     display: none
   }
-  .sm{
+  .sm, .btn.sm{
     display: block
   }
   .about{
@@ -150,4 +202,12 @@ p{
   .about p{
     padding-right: 0;
   }
+}
+
+
+@keyframes ll{
+  100%{opacity: 0.7;}
+}
+@keyframes float{
+  100%{transform: translate(0, 7px)}
 }
